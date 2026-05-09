@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online | Coffee House</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-mug-hot"></i>
+            <h1>Coffee House</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html" class="active">Order</a>
+            <a href="contact.html">Contact</a>
+            
+            
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>Order <span class="highlight">Online</span></h1>
+                <p>Choose your favorite coffee and get it delivered</p>
+            </div>
+        </section>
+
+        <!-- Order Section -->
+        <section class="order-page">
+            <div class="order-container">
+                <!-- Left Side - Products -->
+                <div class="products-section">
+                    <div class="section-title">
+                        <h2>Our <span class="highlight">Coffee Menu</span></h2>
+                        <p>Select your favorite coffee</p>
+                    </div>
+                    
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Product 1 -->
+                        <div class="product-card" data-id="1" data-name="Espresso" data-price="3.99">
+                            <div class="product-img">
+                                <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Espresso">
+                                <span class="product-badge">Bestseller</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>☕ Espresso</h3>
+                                <p>Strong and rich Italian coffee</p>
+                                <div class="product-price">$3.99</div>
+                                <button class="add-to-cart-btn" onclick="addToCart(1, 'Espresso', 3.99)">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+    
+
+                        <!-- Product 3 -->
+                        <div class="product-card" data-id="3" data-name="Cappuccino" data-price="5.99">
+                            <div class="product-img">
+                                <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Cappuccino">
+                                <span class="product-badge">Popular</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>🫕 Cappuccino</h3>
+                                <p>Espresso with steamed milk foam</p>
+                                <div class="product-price">$5.99</div>
+                                <button class="add-to-cart-btn" onclick="addToCart(3, 'Cappuccino', 5.99)">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card" data-id="4" data-name="Caramel Latte" data-price="5.99">
+                            <div class="product-img">
+                                <img src="https://www.whiskaffair.com/wp-content/uploads/2021/01/Caramel-Latte-2-1.jpg?auto=compress&cs=tinysrgb&w=300" alt="Caramel Latte">
+                            </div>
+                            <div class="product-info">
+                                <h3>🥛 Caramel Latte</h3>
+                                <p>Smooth espresso with caramel</p>
+                                <div class="product-price">$5.99</div>
+                                <button class="add-to-cart-btn" onclick="addToCart(4, 'Caramel Latte', 5.99)">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                
+
+                        <!-- Product 6 -->
+                        <div class="product-card" data-id="6" data-name="Cold Coffee" data-price="4.99">
+                            <div class="product-img">
+                                <img src="https://www.sharmispassions.com/wp-content/uploads/2020/02/iced-coffee-recipe1.jpg?auto=compress&cs=tinysrgb&w=600" alt="Cold Coffee" width="300">
+                            </div>
+                            <div class="product-info">
+                                <h3>🧊 Cold Coffee</h3>
+                                <p>Refreshing iced coffee</p>
+                                <div class="product-price">$4.99</div>
+                                <button class="add-to-cart-btn" onclick="addToCart(6, 'Cold Coffee', 4.99)">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product 7 -->
+                         <div class="product-card" data-id="7" data-name="Frappuccino" data-price="7.49">
+                            <div class="product-img">
+                                <img src="https://www.aheadofthyme.com/wp-content/uploads/2022/06/frappuccino-2.jpg?auto=compress&cs=tinysrgb&w=300" alt="Frappuccino">
+                                <span class="product-badge">Summer Special</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>🥤 Frappuccino</h3>
+                                <p>Blended ice coffee with cream</p>
+                                <div class="product-price">$7.49</div>
+                                <button class="add-to-cart-btn" onclick="addToCart(7, 'Frappuccino', 7.49)">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product 8 -->
+                        <div class="product-card" data-id="8" data-name="Macchiato" data-price="5.49">
+                            <div class="product-img">
+                                <img src="https://gatherforbread.com/wp-content/uploads/2017/04/Iced-Caramel-Macchiato-16-683x1024.jpg?auto=compress&cs=tinysrgb&w=300" alt="Macchiato">
+                            </div>
+                            <div class="product-info">
+                                <h3>✨ Caramel Macchiato</h3>
+                                <p>Espresso with vanilla & caramel</p>
+                                <div class="product-price">$5.49</div>
+                                <button class="add-to-cart-btn" onclick="addToCart(8, 'Caramel Macchiato', 5.49)">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Cart -->
+                <div class="cart-section">
+                    <div class="cart-card">
+                        <div class="cart-header">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>Your Order</h3>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </div>
+                        
+                        <div class="cart-items" id="cartItems">
+                            <div class="empty-cart">
+                                <i class="fas fa-shopping-basket"></i>
+                                <p>Your cart is empty</p>
+                                <span>Add some coffee from the menu</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-summary">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Fee:</span>
+                                <span id="deliveryFee">$2.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="total">$0.00</span>
+                            </div>
+                        </div>
+                        
+                        <button class="checkout-btn" id="checkoutBtn" onclick="checkout()">
+                            <i class="fas fa-credit-card"></i> Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-mug-hot"></i>
+                <h3>Coffee House</h3>
+                <p>Serving happiness since 2020</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="order.html">Order</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Get 10% off on your first order</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Coffee House | Brewed with ❤️ | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Cart array
+        let cart = [];
+        
+        // Add to cart function
+        function addToCart(id, name, price) {
+            const existingItem = cart.find(item => item.id === id);
+            
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({
+                    id: id,
+                    name: name,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            updateCartDisplay();
+            showNotification(${name} added to cart!);
+        }
+        
+        // Update cart display
+        function updateCartDisplay() {
+            const cartItemsDiv = document.getElementById('cartItems');
+            const cartCount = document.getElementById('cartCount');
+            const subtotalSpan = document.getElementById('subtotal');
+            const totalSpan = document.getElementById('total');
+            
+            // Update cart count
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = 
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>Your cart is empty</p>
+                        <span>Add some coffee from the menu</span>
+                    </div>
+                ;
+                subtotalSpan.textContent = '$0.00';
+                totalSpan.textContent = '$0.00';
+                return;
+            }
+            
+            // Build cart items HTML
+            let cartHTML = '';
+            let subtotal = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+                
+                cartHTML += `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <h4>${item.name}</h4>
+                            <p>$${item.price.toFixed(2)}</p>
+                        </div>
+                        <div class="cart-item-actions">
+                            <button class="qty-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                            <span class="qty">${item.quantity}</span>
+                            <button class="qty-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+                            <button class="remove-btn" onclick="removeItem(${item.id})">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        </div>
+                ;
+            });
+            
+            cartItemsDiv.innerHTML = cartHTML;
+            
+            // Update totals
+            const deliveryFee = 2.00;
+            const total = subtotal + deliveryFee;
+            
+            subtotalSpan.textContent = $${subtotal.toFixed(2)};
+            totalSpan.textContent = $${total.toFixed(2)};
+        }
+        
+        // Update quantity
+        function updateQuantity(id, change) {
+            const item = cart.find(item => item.id === id);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(item => item.id !== id);
+                }
+            }
+            updateCartDisplay();
+        }
+        
+        // Remove item
+        function removeItem(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartDisplay();
+            showNotification('Item removed from cart');
+        }
+        
+        // Show notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = 
+                <i class="fas fa-check-circle"></i>
+                <span>${message}</span>
+            ;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 2000);
+        }
+        
+        // Checkout function
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty! Please add some items.');
+                return;
+            }
+            
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const deliveryFee = 2.00;
+            const total = subtotal + deliveryFee;
+            
+            let orderSummary = '🛒 Order Summary:\n\n';
+            cart.forEach(item => {
+                orderSummary += ${item.name} x ${item.quantity} = $${(item.price * item.quantity).toFixed(2)}\n;
+            });
+            orderSummary += \nSubtotal: $${subtotal.toFixed(2)};
+            orderSummary += \nDelivery Fee: $${deliveryFee.toFixed(2)};
+            orderSummary += \nTotal: $${total.toFixed(2)};
+            orderSummary += \n\n✅ Thank you for your order!`;
+            
+            alert(orderSummary);
+            
+            // Clear cart after order
+            cart = [];
+            updateCartDisplay();
+        }
+    </script>
+</body>
+</html>
